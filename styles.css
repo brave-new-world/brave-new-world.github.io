@@ -1,0 +1,76 @@
+body {
+	background-color: #707d80;
+ 	font-family: Roboto, sans-serif;
+ 	color: white;
+ 	margin: 0;
+ 	padding: 0;
+ 	overflow: hidden;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar { display: none; }
+
+div {
+  	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.bg-img {
+	position: fixed !important;
+	left: -10%;
+	top: -10%;
+	width: 120%;
+	height: 120vh;
+}
+
+#bg-img-prev {
+	background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAVACADAREAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAABAYHBQj/xAAqEAACAQMDAwMDBQAAAAAAAAABAgMEBREABiESMUEHE1EXcbEiJEKh8P/EABoBAAMBAAMAAAAAAAAAAAAAAAMEBQIAAQb/xAAlEQABBAEDAgcAAAAAAAAAAAABAAIDETEEEiETMgUVIkFCUXH/2gAMAwEAAhEDEQA/AGO3w7bp6eQLdvdhXhfZgZmb8a9FUig72fad9obY2/fqd3uFbNaU4WImnMrucdiBgLx8nQndQdotaa6M5NJi+jOw6tXY7mmjkAyP2p5++TxpZ0krfZMNETvkp/6gWrYmyIpFqb0VwOA0ZLscZwEUEjjnnA0A6sN7ii9AHC4jt10udrhSSZZIuv8AUrqD0MuMgnn/AGc+RmLHrpBwTaov0cZwrl6UeuNwtoSDoRyyhUhWQIxYkcnOc/nnR/MCzJpT36OjhNO4fXy8UlCslZHNZ6ct0lY1Lzztg4SPA7n5BGPJ0jN4k59hrr/EzDowKNKB3/edbuT2mqJDSR+26OmGdgW7gueST/IdjjGMdkHT3hVGaYCipvt/d1ebW6TOKiMH2umVVbHnIJGR38aDKzafSuB5DUXJeSlNDI1NBKQrSKJEz0kHHH3C/wB4ORxro7idpK22r5FrRO5qie6R0sSikeSMSEwHEQyenAQ58D58nWREMlNl1cDhAV10eGmVgilOMKe4zgd9F28odr//2Q==');
+	-webkit-filter: blur(20px);
+	-moz-filter: blur(20px);
+	-o-filter: blur(20px);
+	-ms-filter: blur(20px);
+	filter: blur(20px);
+}
+
+#bg-img {
+	background-image: url('bg.jpg');
+    visibility: hidden;
+}
+
+.center-text {
+	margin-top: 36vh;
+	margin-left: 10vw;
+	width: 80vw;
+	font-size: 4vw;
+	line-height: 2;
+	font-family: Berkshire Swash, serif;
+	text-shadow: 0px 0px 20px rgba(0,0,0,.5);
+}
+
+.left {
+	text-align: left;
+	height: 8vw;
+}
+.center {
+	text-align: center;
+	width: 60vw;
+	height: 8vw;
+}
+.right {
+	text-align: right;
+	height: 8vw;
+}
+
+.bottom-text {
+	margin-top: 94vh;
+	width: 100vw;
+	font-size: 2.5vw;
+	text-align: center;
+}

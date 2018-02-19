@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Brave New World</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div data-relative-input="true" id="scene">
+
+            <div data-depth="0.2">
+                <div id="bg-img-prev" class="bg-img"></div>
+                <div id="bg-img" class="bg-img"></div>
+            </div>
+
+            <div data-depth="0.5">
+                <div class="center-text">
+                    <div class="left">Once...</div>
+                    <div class="center">I got a wonderful chance...</div>
+                    <div class="right">...to travel through the worlds</div>
+                </div>
+            </div>
+
+            <div data-depth="0.2">
+                <div class="bottom-text">coming soon</div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="parallax.min.js"></script>
+    <script>
+        function $(id) { return document.getElementById(id); }
+        
+        function removeImgPreview() {
+            $('bg-img').style.visibility = 'visible';
+            $('bg-img-prev').parentElement.removeChild($('bg-img-prev'));
+        }
+        
+        new Parallax($('scene'));
+        window.onload = function() { removeImgPreview(); }
+    </script>
+</body>
+
+</html>
