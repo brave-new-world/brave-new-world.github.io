@@ -12,7 +12,7 @@
 
 <body>
     <div id="container" class="container">
-        <div id="scene">
+        <div data-relative-input="true" id="scene">
 
             <div data-depth="0.2" id="bg">
                 <div id="bg-img-prev" class="bg-img"></div>
@@ -28,7 +28,7 @@
             </div>
 
             <div data-depth="0.2">
-                <div class="bottom-text">coming soon</div>
+                <div class="bottom-text">COMING SOON</div>
             </div>
 
         </div>
@@ -43,8 +43,16 @@
             $('bg').removeChild($('bg-img-prev'));
         }
         
-        new Parallax($('scene'));
         window.onload = function() { removeBackgroundPreview(); }
+        
+        const scene = $('scene');
+        
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+            // The browser is Firefox
+            scene.setAttribute('data-relative-input', false);
+        }
+        
+        new Parallax(scene);
     </script>
 </body>
 
