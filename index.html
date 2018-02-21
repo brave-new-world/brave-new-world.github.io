@@ -12,9 +12,9 @@
 
 <body>
     <div id="container" class="container">
-        <div data-relative-input="true" id="scene">
+        <div id="scene">
 
-            <div data-depth="0.2">
+            <div data-depth="0.2" id="bg">
                 <div id="bg-img-prev" class="bg-img"></div>
                 <div id="bg-img" class="bg-img"></div>
             </div>
@@ -38,13 +38,13 @@
     <script>
         function $(id) { return document.getElementById(id); }
         
-        function removeImgPreview() {
+        function removeBackgroundPreview() {
             $('bg-img').style.visibility = 'visible';
-            $('bg-img-prev').parentElement.removeChild($('bg-img-prev'));
+            $('bg').removeChild($('bg-img-prev'));
         }
         
         new Parallax($('scene'));
-        window.onload = function() { removeImgPreview(); }
+        window.onload = function() { removeBackgroundPreview(); }
     </script>
 </body>
 
